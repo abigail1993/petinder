@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selection from './Components/Selection';
+import Navbar from './Components/Navbar'
+import Matches from './Components/component3';
+//import Options from './Components/Options';
 
 class App extends Component {
   constructor() {
@@ -26,8 +29,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <Selection pets={this.state.pets}/>
+      <div className="App">
+            <Selection pets={this.state.pets}/>
+        si esta jalando react
+
       </div>
     );
   }
