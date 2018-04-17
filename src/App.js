@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selection from './Components/Selection';
-//import Options from './Components/Options';
+import Navbar from './Components/Navbar'
+import Matches from './Components/component3';
+import Options from './Components/Options';
+import Home from './Components/Home';
+import Profile from './Components/Profile';
+import { Link, Switch, Route } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -38,6 +43,21 @@ class App extends Component {
     return (
       <div className="App">
             <Selection dogs={this.state.dogs} cats={this.state.cats}/>
+      <div>
+        <Switch>
+          <Route path = '/' exact render = { () => { return ( <Selection 
+          pets={this.state.pets}
+          />)}}/>
+          <Route path = '/Favorites' exact render = { () => { return ( <Options 
+          // algun estado...
+          />)}}/>
+          <Route path = '/Matches' exact render = { () => { return ( <Matches 
+          // algun estado...
+          />)}}/>
+        </Switch>
+        <section>
+          <Navbar/>
+        </section>
       </div>
     );
   }

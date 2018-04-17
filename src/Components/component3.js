@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
 
+
 class Matches extends React.Component {
     render(){
         return(
-        <div>
-            <div className='row'>
-                <div className='col-sm col-md'>
+        <div className="container-fluid">
+            <div class='row'>
+                <div className='col-sm col- col-md '>
                     <h1>MATCHES</h1>
-                </div>
-            </div>
-            <div>
-                <div className='row'>
-                    <div className='col-sm col-md'>
-                        <img src='https://dummyimage.com/600x400/000/fff' alt='mascota' />
+                </div> 
+                <div className="col-sm-12" id="App-options">
+                    <div className="card">
+                        <img id="App-img-options" className="card-img-top" src="..." alt="Card image cap"/>
                     </div>
                 </div>
-                <div className='row'>
-                    <div className='col-sm col-md'>
-                    <button type="button" class="btn btn-outline-light">
-                        <span className="fa fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x btn"></span>
-                    </button>
-                    <button type="button" class="btn btn-outline-light">
-                        <span className="fa fa-heart fa-lg white-text mr-md-5 mr-3 fa-2x btn"></span>
-                    </button>
+                </div>  
+                    <div className='col-sm col- col-md'>
+                        <button type="button" class="btn btn-light">
+                            <span className="fa fa-envelope fa-lg "></span>
+                        </button>
+                        <button type="button" class="btn btn-light">
+                            <span className="fa fa-heart fa-lg"></span>
+                        </button>
                     </div>
-                </div>
             </div>
-        </div>
         )
     }
 }
