@@ -4,6 +4,10 @@ import Selection from './Components/Selection';
 import Navbar from './Components/Navbar'
 import Matches from './Components/component3';
 import Options from './Components/Options';
+import Home from './Components/Home';
+import Profile from './Components/Profile';
+
+
 import { Link, Switch, Route } from 'react-router-dom'
 
 class App extends Component {

@@ -16,8 +16,8 @@ class Options extends Component {
                 </div>
               </div>
             </div>
-          );
-        }
-    }
+     );
+  }
+}
 
 export default Options;
