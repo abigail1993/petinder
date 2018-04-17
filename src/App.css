@@ -26,3 +26,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#App-options { /*estilos para componente de Options*/
+  margin:0px;
+  padding: 0px;
+}
+#App-img-options { /*estilos para componente Options*/
+  border: 2px solid black;
+  width: 70%;
+  margin: 50px auto;
+}
