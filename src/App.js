@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Selection from './Components/Selection';
 import Navbar from './Components/Navbar'
-import Matches from './Components/component3';
-//import Options from './Components/Options';
+import Matches from './Components/Matches';
+import Options from './Components/Options';
+import { Link, Switch, Route } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -29,10 +30,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-            <Selection pets={this.state.pets}/>
-        si esta jalando react
-
+      <div>
+        <Switch>
+          <Route path = '/' exact render = { () => { return ( <Selection 
+          pets={this.state.pets}
+          />)}}/>
+          <Route path = '/Favorites' exact render = { () => { return ( <Options 
+          // algun estado...
+          />)}}/>
+          <Route path = '/Matches' exact render = { () => { return ( <Matches 
+          // algun estado...
+          />)}}/>
+        </Switch>
+        <section>
+          <Navbar/>
+        </section>
       </div>
     );
   }
