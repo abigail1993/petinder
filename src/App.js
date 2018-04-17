@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Selection from './Components/Selection';
 import Navbar from './Components/Navbar'
-import Matches from './Components/Matches';
+import Matches from './Components/component3';
 import Options from './Components/Options';
 import { Link, Switch, Route } from 'react-router-dom'
 
