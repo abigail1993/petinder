@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selection from './Components/Selection';
-import Navbar from './Components/Navbar'
-import Matches from './Components/component3';
 //import Options from './Components/Options';
 
 class App extends Component {
@@ -10,19 +8,28 @@ class App extends Component {
     super();
     this.state = {
       matches: [],
-      pets: []
+      dogs: [],
+      cats: []
     }
   }
 
   componentDidMount() {
         console.log('--componentDidMount--')
-        fetch('https://cors-anywhere.herokuapp.com/http://api.petfinder.com/breed.list?format=json&key=bde6bfb57ad8ab2f7878b97cb1c5dae2&animal=cat')
+        fetch('https://cors-anywhere.herokuapp.com/http://api.petfinder.com/pet.find?format=json&key=bde6bfb57ad8ab2f7878b97cb1c5dae2&animal=dog&location=LA')
           .then((response) => {
             return response.json()
           }).then((response) => {
-            console.log(response.petfinder.breeds)
             this.setState({
-              pets: response.petfinder.breeds,
+              dogs: response.petfinder.pets
+            })
+          })
+
+        fetch('https://cors-anywhere.herokuapp.com/http://api.petfinder.com/pet.find?format=json&key=bde6bfb57ad8ab2f7878b97cb1c5dae2&animal=cat&location=LA')
+          .then((response) => {
+            return response.json()
+          }).then((response) => {
+            this.setState({
+              cats: response.petfinder.pets
             })
           })
   }
@@ -30,9 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-            <Selection pets={this.state.pets}/>
-        si esta jalando react
-
+            <Selection dogs={this.state.dogs} cats={this.state.cats}/>
       </div>
     );
   }
