@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Selection from './Components/Selection';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      matches: [],
+      pets: []
+    }
+  }
+
+  componentDidMount() {
+        console.log('--componentDidMount--')
+        fetch('https://cors-anywhere.herokuapp.com/http://api.petfinder.com/breed.list?format=json&key=bde6bfb57ad8ab2f7878b97cb1c5dae2&animal=cat')
+          .then((response) => {
+            return response.json()
+          }).then((response) => {
+            console.log(response.petfinder.breeds)
+            this.setState({
+              pets: response.petfinder.breeds,
+            })
+          })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+      <Selection pets={this.state.pets}/>
       </div>
     );
   }

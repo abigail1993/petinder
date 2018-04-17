@@ -26,3 +26,26 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/*============= Selection component ==============*/
+
+#selection {
+  border: 1px solid gray;
+  height: 90vh;
+  margin: 30px 15px;
+}
+
+.option-container {
+  margin: 3em 1em;
+}
+
+.img-selection {
+  border-radius: 80%;
+  width: 100%;
+  height: 30vh;
+}
+
+.img-selection:hover {
+  transform: scale(1.1);
+}
