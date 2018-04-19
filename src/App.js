@@ -42,16 +42,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-            <Selection dogs={this.state.dogs} cats={this.state.cats}/>
-      <div>
+            {/* <Selection dogs={this.state.dogs} cats={this.state.cats}/> */}
+      
         <Switch>
+          <Route path = '/Profile' exact render = { () => { return ( <Profile 
+          // algun estado...
+          />)}}/>
           <Route path = '/' exact render = { () => { return ( <Selection 
-          pets={this.state.pets}
+            dogs={this.state.dogs} 
+            cats={this.state.cats}
           />)}}/>
           <Route path = '/Favorites' exact render = { () => { return ( <Options 
           // algun estado...
           />)}}/>
           <Route path = '/Matches' exact render = { () => { return ( <Matches 
+          // algun estado...
+          />)}}/>
+          <Route path = '/LogOut' exact render = { () => { return ( <Home 
           // algun estado...
           />)}}/>
         </Switch>
