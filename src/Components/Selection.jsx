@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Options from './Options'
+
 class Selection extends Component {
 	constructor(props){
 		super();
@@ -14,7 +15,7 @@ class Selection extends Component {
 				<div id='selection'>
 					<div className='row option-container'>
 						<div className='col-6 offset-3'>
-							<Link to='dogsOptions'><img className='img-responsive img-selection' src='https://s-media-cache-ak0.pinimg.com/originals/cc/51/12/cc5112fe33dfe952e66692f816f2ea8e.jpg'></img></Link>
+							<Link to='/dogsOptions'><img className='img-responsive img-selection' src='https://s-media-cache-ak0.pinimg.com/originals/cc/51/12/cc5112fe33dfe952e66692f816f2ea8e.jpg'></img></Link>
 						</div>
 					</div>
 					<div className='row option-container'>
